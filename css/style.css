@@ -1,7 +1,7 @@
 /* GENERAL STYLING */
 body {
     display: none;
-    background: pink;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
     color: white;
     text-align: center;
     opacity: 0;
@@ -45,12 +45,19 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9a9e;
+    text-shadow: 0 0 10px rgba(255, 154, 158, 0.7);
 }
 
 nav button {
@@ -59,12 +66,26 @@ nav button {
     color: white;
     cursor: pointer;
     font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav button:hover {
+    color: #ff9a9e;
+    text-shadow: 0 0 10px rgba(255, 154, 158, 0.7);
 }
 
 /* MAIN CONTAINER */
 .container {
     margin-top: 100px;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 /* QUOTES SECTION */
@@ -73,6 +94,12 @@ nav button {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#quote-box:hover {
+    transform: scale(1.05);
 }
 
 /* DARK MODE */
@@ -87,4 +114,50 @@ p, h1, h2, h3, h4, h5, h6, span, a {
     color: inherit;
     margin: 0;
     padding: 0;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9a9e;
+    text-shadow: 0 0 10px rgba(255, 154, 158, 0.7);
+}
+
+/* CONTACT FORM */
+#contact-form {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form button {
+    background: #ff9a9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #fad0c4;
 }
